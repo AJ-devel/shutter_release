@@ -6,6 +6,6 @@ This script is intended to be used with older DSLR cameras that don't have the a
 
 ## Run example:
 
-.\serial_relay_shutter_control.ps1 -com_port_number 8 -baud_rate 9600 -exposure_time_seconds 120 -number_of_pictures 10
+``` .\serial_relay_shutter_control.ps1 -com_port_number 8 -baud_rate 9600 -exposure_time_seconds 120 -number_of_pictures 10 ```
 
 The above example will connect to COM7 at baud 9600 taking a 2 minute exposure waiting 1 second between exposures.  It will take a total of 10 pictures like this.
