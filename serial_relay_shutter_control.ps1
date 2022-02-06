@@ -25,7 +25,6 @@ function Open-Shutter {
 
     $port.open()
     $port.Write($open_relay_hex, 0, $open_relay_hex.Count)
-    $port.close()
 
     Write-Host "Shutter open"
     }
@@ -42,7 +41,6 @@ function Close-Shutter {
 
     $port.open()
     $port.Write($close_relay_hex, 0, $close_relay_hex.Count)
-    $port.close()
 
     Write-Host "Shutter closed"
     }
@@ -83,4 +81,5 @@ finally {
     # Always close shutter
     $port = New-Object System.IO.Ports.SerialPort("COM$com_port_number", $baud_rate, "None", 8, "One")
     Close-Shutter $port $close_relay_hex
+    $port.close()
 }
